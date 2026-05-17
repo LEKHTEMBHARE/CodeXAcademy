@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Courses - NEXTGEN CODING</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Sora:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-grid"></div>
+    <div id="particles" aria-hidden="true"></div>
+
+    <header class="nav">
+      <div class="container nav-inner">
+        <div class="brand">
+          <span class="brand-mark"></span>
+          <span class="brand-text">NEXTGEN CODING</span>
+        </div>
+        <nav class="nav-links">
+           <a href="index.html">Home</a>
+          <a href="courses.html" class="active">Courses</a>
+           <a href="why.html">Why Us</a>
+           <a href="bridgeai.html">BridgeAI</a>
+           <a href="projects.html">Projects</a>
+           <a href="testimonials.html">Testimonials</a>
+           <a href="register.html">Register</a>
+           <a href="contact.html">Contact</a>
+        </nav>
+          <a class="btn btn-small" href="register.html">Enroll Now</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero section page-hero">
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Basics To Pro</p>
+            <h1>Courses That Start From Scratch</h1>
+            <p class="subtitle">
+              We teach from zero level and take you to real projects with live mentorship.
+            </p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="#catalog">Explore Catalog</a>
+                <a class="btn btn-secondary" href="register.html">Join Next Batch</a>
+            </div>
+            <div class="hero-tags">
+                <span class="float-tag"><i data-lucide="layers"></i> Full Stack</span>
+                <span class="float-tag"><i data-lucide="boxes"></i> MERN</span>
+                <span class="float-tag"><i data-lucide="cpu"></i> Java</span>
+                <span class="float-tag"><i data-lucide="terminal"></i> Python</span>
+            </div>
+          </div>
+          <div class="hero-visual reveal">
+            <div class="laptop">
+              <div class="screen">
+                <div class="screen-glow"></div>
+                <div class="code-lines">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <div class="base"></div>
+            </div>
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="catalog" class="section">
+        <div class="container">
+          <div class="section-title reveal">
+            <h2>Course Catalog</h2>
+            <p>Click any course card to see what you learn and build.</p>
+          </div>
+          <div class="grid course-grid">
+            <details class="course-card reveal" id="course-fullstack">
+              <summary>
+                <img
+                  class="course-thumb"
+                  src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80"
+                  alt="Full stack development"
+                  loading="lazy"
+                />
+                <div class="course-summary">
+                  <p class="course-badge">Beginner Friendly</p>
+                  <h3>Full Stack Development</h3>
+                  <p>Frontend to backend with real projects and hosting.</p>
+                  <div class="course-tags">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JS</span>
+                    <span>APIs</span>
+                  </div>
+                </div>
+                <span class="course-toggle">View</span>
+              </summary>
+              <div class="course-content">
+                <p class="course-desc">
+                  Learn step by step: build webpages, connect databases, and deploy apps.
+                </p>
+                <ul class="course-list">
+                  <li>Responsive UI, forms, and layouts</li>
+                  <li>Backend APIs, authentication, and databases</li>
+                  <li>Deploy on hosting with custom domain</li>
+                </ul>
+                <div class="course-actions">
+                  <a class="btn btn-secondary btn-small" href="register.html">Join Batch</a>
+                  <a class="btn btn-secondary btn-small" href="contact.html">Talk to Us</a>
+                </div>
+              </div>
+            </details>
+
+            <details class="course-card reveal" id="course-mern">
+              <summary>
+                <img
+                  class="course-thumb"
+                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80"
+                  alt="MERN stack development"
+                  loading="lazy"
+                />
+                <div class="course-summary">
+                  <p class="course-badge">Popular Track</p>
+                  <h3>MERN Stack Development</h3>
+                  <p>MongoDB, Express, React, and Node from basics.</p>
+                  <div class="course-tags">
+                    <span>MongoDB</span>
+                    <span>Express</span>
+                    <span>React</span>
+                    <span>Node</span>
+                  </div>
+                </div>
+                <span class="course-toggle">View</span>
+              </summary>
+              <div class="course-content">
+                <p class="course-desc">
+                  Build full MERN apps with routing, APIs, and deployment support.
+                </p>
+                <ul class="course-list">
+                  <li>React components, hooks, and state</li>
+                  <li>Express APIs, JWT auth, and CRUD</li>
+                  <li>Production deployment and hosting</li>
+                </ul>
+                <div class="course-actions">
+                  <a class="btn btn-secondary btn-small" href="register.html">Join Batch</a>
+                  <a class="btn btn-secondary btn-small" href="contact.html">Talk to Us</a>
+                </div>
+              </div>
+            </details>
+
+            <details class="course-card reveal" id="course-javafullstack">
+              <summary>
+                <img
+                  class="course-thumb"
+                  src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=900&q=80"
+                  alt="Java full stack"
+                  loading="lazy"
+                />
+                <div class="course-summary">
+                  <p class="course-badge">Job Track</p>
+                  <h3>Java Full Stack</h3>
+                  <p>Java, Spring Boot, and frontend basics together.</p>
+                  <div class="course-tags">
+                    <span>Java</span>
+                    <span>Spring Boot</span>
+                    <span>SQL</span>
+                  </div>
+                </div>
+                <span class="course-toggle">View</span>
+              </summary>
+              <div class="course-content">
+                <p class="course-desc">
+                  Start with Java basics, then build full apps with backend APIs.
+                </p>
+                <ul class="course-list">
+                  <li>OOP, collections, and JDBC</li>
+                  <li>Spring Boot REST APIs</li>
+                  <li>Frontend integration and deployment</li>
+                </ul>
+                <div class="course-actions">
+                  <a class="btn btn-secondary btn-small" href="register.html">Join Batch</a>
+                  <a class="btn btn-secondary btn-small" href="contact.html">Talk to Us</a>
+                </div>
+              </div>
+            </details>
+
+            <details class="course-card reveal" id="course-python">
+              <summary>
+                <img
+                  class="course-thumb"
+                  src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?auto=format&fit=crop&w=900&q=80"
+                  alt="Python programming"
+                  loading="lazy"
+                />
+                <div class="course-summary">
+                  <p class="course-badge">Core Skill</p>
+                  <h3>Python Programming</h3>
+                  <p>Basics to automation and data handling.</p>
+                  <div class="course-tags">
+                    <span>Python</span>
+                    <span>Logic</span>
+                    <span>Automation</span>
+                  </div>
+                </div>
+                <span class="course-toggle">View</span>
+              </summary>
+              <div class="course-content">
+                <p class="course-desc">
+                  Learn Python from scratch and build mini projects every week.
+                </p>
+                <ul class="course-list">
+                  <li>Variables, loops, functions, and OOP</li>
+                  <li>Files, APIs, and data processing</li>
+                  <li>Mini projects with mentor review</li>
+                </ul>
+                <div class="course-actions">
+                  <a class="btn btn-secondary btn-small" href="register.html">Join Batch</a>
+                  <a class="btn btn-secondary btn-small" href="contact.html">Talk to Us</a>
+                </div>
+              </div>
+            </details>
+
+            <details class="course-card reveal" id="course-aiconsulting">
+              <summary>
+                <img
+                  class="course-thumb"
+                  src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=900&q=80"
+                  alt="AI consulting"
+                  loading="lazy"
+                />
+                <div class="course-summary">
+                  <p class="course-badge">Business Skills</p>
+                  <h3>AI Consulting</h3>
+                  <p>Learn to apply AI tools for real business use cases.</p>
+                  <div class="course-tags">
+                    <span>Use Cases</span>
+                    <span>ROI</span>
+                    <span>Tools</span>
+                  </div>
+                </div>
+                <span class="course-toggle">View</span>
+              </summary>
+              <div class="course-content">
+                <p class="course-desc">
+                  Understand AI strategy, tool selection, and how to pitch solutions.
+                </p>
+                <ul class="course-list">
+                  <li>Problem framing and AI readiness</li>
+                  <li>Tool selection and workflow design</li>
+                  <li>Client communication and proposals</li>
+                </ul>
+                <div class="course-actions">
+                  <a class="btn btn-secondary btn-small" href="register.html">Join Batch</a>
+                  <a class="btn btn-secondary btn-small" href="contact.html">Talk to Us</a>
+                </div>
+              </div>
+            </details>
+
+            <details class="course-card reveal" id="course-prompt">
+              <summary>
+                <img
+                  class="course-thumb"
+                  src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?auto=format&fit=crop&w=900&q=80"
+                  alt="Prompt engineering"
+                  loading="lazy"
+                />
+                <div class="course-summary">
+                  <p class="course-badge">Quick Skill</p>
+                  <h3>Prompt Engineering</h3>
+                  <p>Write prompts that get accurate, useful AI outputs.</p>
+                  <div class="course-tags">
+                    <span>Prompts</span>
+                    <span>Templates</span>
+                    <span>Workflows</span>
+                  </div>
+                </div>
+                <span class="course-toggle">View</span>
+              </summary>
+              <div class="course-content">
+                <p class="course-desc">
+                  Learn prompt patterns for content, code, and productivity.
+                </p>
+                <ul class="course-list">
+                  <li>Prompt patterns, chains, and evaluations</li>
+                  <li>Role prompting and tool integration</li>
+                  <li>Mini projects for real workflows</li>
+                </ul>
+                <div class="course-actions">
+                  <a class="btn btn-secondary btn-small" href="register.html">Join Batch</a>
+                  <a class="btn btn-secondary btn-small" href="contact.html">Talk to Us</a>
+                </div>
+              </div>
+            </details>
+
+            <details class="course-card reveal" id="course-ccpp">
+              <summary>
+                <img
+                  class="course-thumb"
+                  src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80"
+                  alt="C and C++ programming"
+                  loading="lazy"
+                />
+                <div class="course-summary">
+                  <p class="course-badge">Foundations</p>
+                  <h3>C &amp; C++ Programming</h3>
+                  <p>Logic building, memory management, and OOP basics.</p>
+                  <div class="course-tags">
+                    <span>C</span>
+                    <span>C++</span>
+                    <span>OOP</span>
+                  </div>
+                </div>
+                <span class="course-toggle">View</span>
+              </summary>
+              <div class="course-content">
+                <p class="course-desc">
+                  Build strong problem-solving skills with C and C++.
+                </p>
+                <ul class="course-list">
+                  <li>Syntax, pointers, and memory</li>
+                  <li>OOP, classes, and STL basics</li>
+                  <li>Mini projects and practice problems</li>
+                </ul>
+                <div class="course-actions">
+                  <a class="btn btn-secondary btn-small" href="register.html">Join Batch</a>
+                  <a class="btn btn-secondary btn-small" href="contact.html">Talk to Us</a>
+                </div>
+              </div>
+            </details>
+
+            <details class="course-card reveal" id="course-android">
+              <summary>
+                <img
+                  class="course-thumb"
+                  src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=900&q=80"
+                  alt="Android app development"
+                  loading="lazy"
+                />
+                <div class="course-summary">
+                  <p class="course-badge">Mobile</p>
+                  <h3>Android App Development</h3>
+                  <p>Build modern apps with UI, API, and storage.</p>
+                  <div class="course-tags">
+                    <span>Android</span>
+                    <span>UI</span>
+                    <span>APIs</span>
+                  </div>
+                </div>
+                <span class="course-toggle">View</span>
+              </summary>
+              <div class="course-content">
+                <p class="course-desc">
+                  Learn Android fundamentals and publish a real app.
+                </p>
+                <ul class="course-list">
+                  <li>Layouts, navigation, and components</li>
+                  <li>API integration and local storage</li>
+                  <li>Play Store deployment basics</li>
+                </ul>
+                <div class="course-actions">
+                  <a class="btn btn-secondary btn-small" href="register.html">Join Batch</a>
+                  <a class="btn btn-secondary btn-small" href="contact.html">Talk to Us</a>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="cta-panel reveal">
+            <h2>Ready to start your AI journey?</h2>
+            <p>Get a personalized roadmap, project plan, and mentor guidance.</p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="register.html">Register Now</a>
+              <a class="btn btn-secondary" href="contact.html">Talk to a Counselor</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="chatbot" id="chatbot">
+      <button
+        class="chatbot-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="chatbot-panel"
+      >
+        Chatbot
+      </button>
+      <div class="chatbot-panel" id="chatbot-panel" role="dialog" aria-modal="false" aria-hidden="true">
+        <div class="chatbot-header">
+          <div>
+            <p class="chatbot-title">NextGen Assistant</p>
+            <p class="chatbot-subtitle">Ask about services and courses</p>
+          </div>
+          <button class="chatbot-close" type="button" aria-label="Close chat">x</button>
+        </div>
+        <div class="chatbot-messages" aria-live="polite"></div>
+        <div class="chatbot-quick">
+          <button type="button" data-intent="services">Services</button>
+          <button type="button" data-intent="courses">Courses</button>
+          <button type="button" data-intent="bridgeai">BridgeAI</button>
+          <button type="button" data-intent="contact">Contact</button>
+        </div>
+        <form class="chatbot-form">
+          <input
+            class="chatbot-input"
+            type="text"
+            placeholder="Ask in Hindi, English, or Marathi"
+            aria-label="Chat message"
+            required
+          />
+          <button class="chatbot-send" type="submit">Send</button>
+        </form>
+        <p class="chatbot-credit">developed by NextGen COding Intstitute</p>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <h3>NEXTGEN CODING</h3>
+          <p>Premium coding &amp; AI academy for future-ready talent.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+           <a href="index.html">Home</a>
+          <a href="courses.html">Courses</a>
+           <a href="bridgeai.html">BridgeAI</a>
+           <a href="register.html">Register</a>
+        </div>
+        <div>
+          <h4>Courses</h4>
+          <a href="courses.html#course-fullstack">Full Stack</a>
+          <a href="courses.html#course-mern">MERN Stack</a>
+          <a href="courses.html#course-javafullstack">Java Full Stack</a>
+          <a href="courses.html#course-python">Python</a>
+        </div>
+        <div>
+          <h4>Services</h4>
+           <a href="bridgeai.html">AI Interview Prep</a>
+           <a href="bridgeai.html">Resume Guidance</a>
+           <a href="bridgeai.html">Career Assistance</a>
+           <a href="contact.html">Contact</a>
+        </div>
+        <div>
+          <h4>Social</h4>
+          <a href="#">Instagram</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">Twitter</a>
+          <a href="#">YouTube</a>
+        </div>
+      </div>
+      <div class="footer-bottom">Copyright 2026 NEXTGEN CODING. All rights reserved.</div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

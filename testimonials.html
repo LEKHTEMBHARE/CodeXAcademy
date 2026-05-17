@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Testimonials - NEXTGEN CODING</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&family=Sora:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-grid"></div>
+    <div id="particles" aria-hidden="true"></div>
+
+    <header class="nav">
+      <div class="container nav-inner">
+        <div class="brand">
+          <span class="brand-mark"></span>
+          <span class="brand-text">NEXTGEN CODING</span>
+        </div>
+        <nav class="nav-links">
+          <a href="index.html">Home</a>
+          <a href="courses.html">Courses</a>
+          <a href="why.html">Why Us</a>
+          <a href="bridgeai.html">BridgeAI</a>
+          <a href="projects.html">Projects</a>
+          <a href="testimonials.html" class="active">Testimonials</a>
+          <a href="register.html">Register</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <a class="btn btn-small" href="register.html">Enroll Now</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero section page-hero">
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">Student Stories</p>
+            <h1>Real Results From Real Learners</h1>
+            <p class="subtitle">
+              Students who trusted the process and built their confidence.
+            </p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="register.html">Start Your Journey</a>
+              <a class="btn btn-secondary" href="contact.html">Talk to Us</a>
+            </div>
+          </div>
+          <div class="hero-visual reveal">
+            <div class="laptop">
+              <div class="screen">
+                <div class="screen-glow"></div>
+                <div class="code-lines">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+              </div>
+              <div class="base"></div>
+            </div>
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-title reveal">
+            <h2>Student Success Stories</h2>
+            <p>Real learners, real results, and glowing career transitions.</p>
+          </div>
+          <div class="grid testimonial-grid">
+            <div class="card testimonial-card reveal">
+              <p>
+                "NEXTGEN CODING took me from zero to building full stack apps in weeks. The mentors
+                are elite."
+              </p>
+              <span class="author">- Aditi R., Full Stack Learner</span>
+            </div>
+            <div class="card testimonial-card reveal">
+              <p>
+                "BridgeAI prep sessions helped me crack interviews confidently. The AI tools are
+                game-changing."
+              </p>
+              <span class="author">- Rahul S., AI Track</span>
+            </div>
+            <div class="card testimonial-card reveal">
+              <p>
+                "Loved the practical projects and feedback. My portfolio looks premium now."
+              </p>
+              <span class="author">- Neha K., Frontend Track</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="cta-panel reveal">
+            <h2>Want results like these?</h2>
+            <p>We help you start from basics and grow step by step.</p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="register.html">Register Now</a>
+              <a class="btn btn-secondary" href="contact.html">Schedule a Call</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div class="chatbot" id="chatbot">
+      <button
+        class="chatbot-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="chatbot-panel"
+      >
+        Chatbot
+      </button>
+      <div class="chatbot-panel" id="chatbot-panel" role="dialog" aria-modal="false" aria-hidden="true">
+        <div class="chatbot-header">
+          <div>
+            <p class="chatbot-title">NextGen Assistant</p>
+            <p class="chatbot-subtitle">Ask about services and courses</p>
+          </div>
+          <button class="chatbot-close" type="button" aria-label="Close chat">x</button>
+        </div>
+        <div class="chatbot-messages" aria-live="polite"></div>
+        <div class="chatbot-quick">
+          <button type="button" data-intent="services">Services</button>
+          <button type="button" data-intent="courses">Courses</button>
+          <button type="button" data-intent="bridgeai">BridgeAI</button>
+          <button type="button" data-intent="contact">Contact</button>
+        </div>
+        <form class="chatbot-form">
+          <input
+            class="chatbot-input"
+            type="text"
+            placeholder="Ask in Hindi, English, or Marathi"
+            aria-label="Chat message"
+            required
+          />
+          <button class="chatbot-send" type="submit">Send</button>
+        </form>
+        <p class="chatbot-credit">developed by NextGen COding Intstitute</p>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div>
+          <h3>NEXTGEN CODING</h3>
+          <p>Premium coding &amp; AI academy for future-ready talent.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <a href="index.html">Home</a>
+          <a href="courses.html">Courses</a>
+          <a href="bridgeai.html">BridgeAI</a>
+          <a href="register.html">Register</a>
+        </div>
+        <div>
+          <h4>Courses</h4>
+          <a href="courses.html#course-fullstack">Full Stack</a>
+          <a href="courses.html#course-mern">MERN Stack</a>
+          <a href="courses.html#course-javafullstack">Java Full Stack</a>
+          <a href="courses.html#course-python">Python</a>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <a href="bridgeai.html">AI Interview Prep</a>
+          <a href="bridgeai.html">Resume Guidance</a>
+          <a href="bridgeai.html">Career Assistance</a>
+          <a href="contact.html">Contact</a>
+        </div>
+        <div>
+          <h4>Social</h4>
+          <a href="#">Instagram</a>
+          <a href="#">LinkedIn</a>
+          <a href="#">Twitter</a>
+          <a href="#">YouTube</a>
+        </div>
+      </div>
+      <div class="footer-bottom">Copyright 2026 NEXTGEN CODING. All rights reserved.</div>
+    </footer>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

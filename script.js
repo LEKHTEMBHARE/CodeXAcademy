@@ -51,7 +51,7 @@ const sendToFormSubmit = async (formData) => {
     throw new Error("Form submission failed.");
   }
 
-  return response.json();
+  return response.json().catch(() => ({}));
 };
 
 const showPopup = (message) => {
@@ -86,7 +86,7 @@ const buildMailtoUrl = (payload) => {
     `Branch: ${payload.branch || ""}`,
   ];
 
-  const subject = encodeURIComponent("New Registration - NEXTGEN CODING");
+  const subject = encodeURIComponent("New Registration - CodeX");
   const body = encodeURIComponent(lines.join("\n"));
   return `mailto:${DESTINATION_EMAIL}?subject=${subject}&body=${body}`;
 };
@@ -133,7 +133,7 @@ if (form) {
     }
 
     try {
-      formData.append("_subject", "New Registration - NEXTGEN CODING");
+      formData.append("_subject", "New Registration - CodeX");
       formData.append("_template", "table");
       formData.append("_captcha", "false");
 
@@ -167,45 +167,39 @@ if (chatbot) {
   const responses = {
     en: {
       greet:
-        "Hi! I can help with our services and courses. Ask about courses, BridgeAI, interview prep, resume guidance, or contact info.",
+        "Hi! I can help with our services and courses. Ask about courses, interview prep, resume guidance, or contact info.",
       services:
-        "Our services include BridgeAI (AI interview prep, mock interviews, resume guidance, AI career assistance, real industry projects, AI tools learning), industry-level mentorship, online classes, hands-on training, and job-ready portfolio support. Courses: Full Stack, MERN Stack, Java Full Stack, Python Programming, AI Consulting, Prompt Engineering, C & C++, Android App Development.",
+        "Our services include AI interview prep, mock interviews, resume guidance, AI career assistance, real industry projects, AI tools learning, industry-level mentorship, online classes, hands-on training, and job-ready portfolio support. Courses: Web Development, App Development, Data Analytics, Full Stack Development, LLM In Machine Learning, Machine Learning, RAG, AI Consulting.",
       courses:
-        "Courses: Full Stack Development, MERN Stack Development, Java Full Stack, Python Programming, AI Consulting, Prompt Engineering, C & C++ Programming, Android App Development.",
-      bridgeai:
-        "BridgeAI includes AI interview preparation, mock interviews, resume guidance, AI career assistance, real industry projects, and AI tools learning.",
+        "Courses: Web Development, App Development, Data Analytics, Full Stack Development, LLM In Machine Learning, Machine Learning, RAG, AI Consulting.",
       contact:
         "Contact: +91 8766787283, +91 9529783209, or email lekhtembhare@gmail.com. WhatsApp: +91 8766787283, +91 9529783209.",
       fallback:
-        "I can explain courses, BridgeAI services, interview prep, resume guidance, or contact info. What would you like to know?",
+        "I can explain courses, interview prep, resume guidance, or contact info. What would you like to know?",
     },
     hi: {
       greet:
-        "नमस्ते! मैं NEXTGEN CODING सहायक हूं। आप कोर्स, BridgeAI, इंटरव्यू प्रेप, रिज़्यूमे गाइडेंस या संपर्क के बारे में पूछ सकते हैं।",
+        "नमस्ते! मैं CodeX सहायक हूं। आप कोर्स, इंटरव्यू प्रेप, रिज़्यूमे गाइडेंस या संपर्क के बारे में पूछ सकते हैं।",
       services:
-        "हमारी सेवाएं: BridgeAI (AI इंटरव्यू तैयारी, मॉक इंटरव्यू, रिज़्यूमे गाइडेंस, AI करियर असिस्टेंस, रियल इंडस्ट्री प्रोजेक्ट्स, AI टूल्स लर्निंग), इंडस्ट्री-लेवल मेंटरशिप, ऑनलाइन क्लासेस, हैंड्स-ऑन ट्रेनिंग और जॉब-रेडी पोर्टफोलियो सपोर्ट। कोर्स: फुल स्टैक, MERN स्टैक, जावा फुल स्टैक, पाइथन प्रोग्रामिंग, AI कंसल्टिंग, प्रॉम्प्ट इंजीनियरिंग, C & C++, एंड्रॉयड ऐप डेवलपमेंट।",
+        "हमारी सेवाएं: AI इंटरव्यू तैयारी, मॉक इंटरव्यू, रिज़्यूमे गाइडेंस, AI करियर असिस्टेंस, रियल इंडस्ट्री प्रोजेक्ट्स, AI टूल्स लर्निंग, इंडस्ट्री-लेवल मेंटरशिप, ऑनलाइन क्लासेस, हैंड्स-ऑन ट्रेनिंग और जॉब-रेडी पोर्टफोलियो सपोर्ट। कोर्स: Web Development, App Development, Data Analytics, Full Stack Development, LLM In Machine Learning, Machine Learning, RAG, AI Consulting।",
       courses:
-        "कोर्स: फुल स्टैक डेवलपमेंट, MERN स्टैक डेवलपमेंट, जावा फुल स्टैक, पाइथन प्रोग्रामिंग, AI कंसल्टिंग, प्रॉम्प्ट इंजीनियरिंग, C & C++ प्रोग्रामिंग, एंड्रॉयड ऐप डेवलपमेंट।",
-      bridgeai:
-        "BridgeAI में मिलता है: AI इंटरव्यू तैयारी, मॉक इंटरव्यू, रिज़्यूमे गाइडेंस, AI करियर असिस्टेंस, रियल इंडस्ट्री प्रोजेक्ट्स और AI टूल्स लर्निंग।",
+        "कोर्स: Web Development, App Development, Data Analytics, Full Stack Development, LLM In Machine Learning, Machine Learning, RAG, AI Consulting।",
       contact:
         "संपर्क: +91 8766787283, +91 9529783209 या ईमेल lekhtembhare@gmail.com. WhatsApp: +91 8766787283, +91 9529783209.",
       fallback:
-        "मैं कोर्स, BridgeAI सेवाएं, इंटरव्यू प्रेप, रिज़्यूमे गाइडेंस या संपर्क की जानकारी बता सकता हूं। आप क्या जानना चाहते हैं?",
+        "मैं कोर्स, इंटरव्यू प्रेप, रिज़्यूमे गाइडेंस या संपर्क की जानकारी बता सकता हूं। आप क्या जानना चाहते हैं?",
     },
     mr: {
       greet:
-        "नमस्कार! मी NEXTGEN CODING सहाय्यक आहे. तुम्ही कोर्सेस, BridgeAI, इंटरव्ह्यू तयारी, रिझ्युमे मार्गदर्शन किंवा संपर्काबद्दल विचारू शकता.",
+        "नमस्कार! मी CodeX सहाय्यक आहे. तुम्ही कोर्सेस, इंटरव्ह्यू तयारी, रिझ्युमे मार्गदर्शन किंवा संपर्काबद्दल विचारू शकता.",
       services:
-        "आमच्या सेवा: BridgeAI (AI इंटरव्ह्यू तयारी, मॉक इंटरव्ह्यू, रिझ्युमे मार्गदर्शन, AI करिअर सहाय्य, रिअल इंडस्ट्री प्रोजेक्ट्स, AI टूल्स लर्निंग), इंडस्ट्री-लेव्हल मेंटॉरशिप, ऑनलाईन क्लासेस, हॅन्ड्स-ऑन ट्रेनिंग आणि जॉब-रेडी पोर्टफोलिओ सपोर्ट. कोर्सेस: फुल स्टॅक, MERN स्टॅक, जावा फुल स्टॅक, Python प्रोग्रामिंग, AI कन्सल्टिंग, प्रॉम्प्ट इंजिनीअरिंग, C & C++, Android अॅप डेव्हलपमेंट.",
+        "आमच्या सेवा: AI इंटरव्ह्यू तयारी, मॉक इंटरव्ह्यू, रिझ्युमे मार्गदर्शन, AI करिअर सहाय्य, रिअल इंडस्ट्री प्रोजेक्ट्स, AI टूल्स लर्निंग, इंडस्ट्री-लेव्हल मेंटॉरशिप, ऑनलाईन क्लासेस, हॅन्ड्स-ऑन ट्रेनिंग आणि जॉब-रेडी पोर्टफोलिओ सपोर्ट. कोर्सेस: Web Development, App Development, Data Analytics, Full Stack Development, LLM In Machine Learning, Machine Learning, RAG, AI Consulting.",
       courses:
-        "कोर्सेस: फुल स्टॅक डेव्हलपमेंट, MERN स्टॅक डेव्हलपमेंट, जावा फुल स्टॅक, Python प्रोग्रामिंग, AI कन्सल्टिंग, प्रॉम्प्ट इंजिनीअरिंग, C & C++ प्रोग्रामिंग, Android अॅप डेव्हलपमेंट.",
-      bridgeai:
-        "BridgeAI मध्ये मिळते: AI इंटरव्ह्यू तयारी, मॉक इंटरव्ह्यू, रिझ्युमे मार्गदर्शन, AI करिअर सहाय्य, रिअल इंडस्ट्री प्रोजेक्ट्स आणि AI टूल्स लर्निंग.",
+        "कोर्सेस: Web Development, App Development, Data Analytics, Full Stack Development, LLM In Machine Learning, Machine Learning, RAG, AI Consulting.",
       contact:
         "संपर्क: +91 8766787283, +91 9529783209 किंवा ईमेल lekhtembhare@gmail.com. WhatsApp: +91 8766787283, +91 9529783209.",
       fallback:
-        "मी कोर्सेस, BridgeAI सेवा, इंटरव्ह्यू तयारी, रिझ्युमे मार्गदर्शन किंवा संपर्क माहिती सांगू शकतो. तुम्हाला काय माहिती हवी आहे?",
+        "मी कोर्सेस, इंटरव्ह्यू तयारी, रिझ्युमे मार्गदर्शन किंवा संपर्क माहिती सांगू शकतो. तुम्हाला काय माहिती हवी आहे?",
     },
   };
 
@@ -246,7 +240,7 @@ if (chatbot) {
       return "courses";
     }
     if (/bridge\s?ai|bridgeai|ब्रिज/i.test(text)) {
-      return "bridgeai";
+      return "services";
     }
     if (/interview|resume|portfolio|career|इंटरव्यू|रिज़्यूमे|रेज्यूमे|करियर/i.test(text)) {
       return "services";

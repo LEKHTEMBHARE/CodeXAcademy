@@ -12,6 +12,25 @@ const popup = document.getElementById("successPopup");
 const popupMessage = document.getElementById("popupMessage");
 const closePopup = document.getElementById("closePopup");
 const backToTop = document.getElementById("backToTop");
+const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+const navLinks = document.getElementById("nav-links");
+
+if (mobileMenuBtn && navLinks) {
+  mobileMenuBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+    const icon = mobileMenuBtn.querySelector("i");
+    if (icon) {
+      if (navLinks.classList.contains("active")) {
+        icon.setAttribute("data-lucide", "x");
+      } else {
+        icon.setAttribute("data-lucide", "menu");
+      }
+      if (window.lucide) {
+        lucide.createIcons();
+      }
+    }
+  });
+}
 
 const revealObserver = new IntersectionObserver(
   (entries) => {

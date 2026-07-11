@@ -25,11 +25,12 @@
         <nav class="nav-links">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
-          <a href="courses.html">Courses</a>
+          <a href="services.html">Services</a>
+          <a href="Courses/courses.html">Courses</a>
           <a href="Events/events.html">Events</a>
           <a href="Team/team.html">Team</a>
           <a href="register.html">Register</a>
-          <a href="contact.html" class="active">Contact</a>
+          <a href="contact.html" class="active">Contact Us</a>
         </nav>
         <a class="btn btn-small" href="register.html">Enroll Now</a>
       </div>
@@ -40,11 +41,11 @@
         <div class="container hero-grid">
           <div class="hero-copy reveal">
             <p class="eyebrow">Contact &amp; Connect</p>
-            <h1>We Are Here To Help You</h1>
-            <p class="subtitle">Reach out and our team will reply quickly.</p>
+            <h1>Let's Build Something Great Together</h1>
+            <p class="subtitle">Have a project, idea, or question? We'd love to hear from you.</p>
             <div class="cta-row">
-              <a class="btn btn-primary" href="register.html">Register Now</a>
-              <a class="btn btn-secondary" href="courses.html">View Courses</a>
+              <a class="btn btn-primary" href="#contact-form">Send Message</a>
+              <a class="btn btn-secondary" href="services.html">View Services</a>
             </div>
           </div>
           <div class="hero-visual reveal">
@@ -67,41 +68,44 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section section-soft">
         <div class="container">
           <div class="section-title reveal">
-            <h2>Contact &amp; Connect</h2>
-            <p>We are ready to build your future. Reach out today.</p>
+            <h2>Contact Information</h2>
+            <p>CODEX Academy</p>
           </div>
-          <div class="grid contact-grid">
-            <div class="card contact-card reveal">
-              <h3>WhatsApp</h3>
-              <p>Chat with our team instantly.</p>
-              <div class="contact-actions">
-                <a class="btn btn-secondary btn-small" href="https://wa.me/918766787283" target="_blank"
-                  >WhatsApp 1</a
-                >
-                <a class="btn btn-secondary btn-small" href="https://wa.me/919529783209" target="_blank"
-                  >WhatsApp 2</a
-                >
-              </div>
-            </div>
-            <div class="card contact-card reveal">
-              <h3>Email</h3>
-              <p>lekhtembhare@gmail.com</p>
-              <a class="btn btn-secondary" href="mailto:lekhtembhare@gmail.com">Send Email</a>
-            </div>
-            <div class="card contact-card reveal">
-              <h3>Call</h3>
+          <div class="grid cards-grid contact-grid">
+            <article class="card contact-card reveal">
+              <div class="icon-circle"><i data-lucide="phone-call"></i></div>
+              <h3>Mobile Numbers</h3>
               <p class="phone-list">
-                <span>+91 8766787283</span>
-                <span>+91 9529783209</span>
+                <span>8766787283</span>
+                <span>9529783209</span>
               </p>
               <div class="contact-actions">
                 <a class="btn btn-secondary btn-small" href="tel:+918766787283">Call 1</a>
                 <a class="btn btn-secondary btn-small" href="tel:+919529783209">Call 2</a>
               </div>
-            </div>
+            </article>
+            <article class="card contact-card reveal">
+              <div class="icon-circle"><i data-lucide="mail"></i></div>
+              <h3>Emails</h3>
+              <p><a href="mailto:lekhtembhare@gmail.com">lekhtembhare@gmail.com</a></p>
+              <p><a href="mailto:gonarkarsameer@gmail.com">gonarkarsameer@gmail.com</a></p>
+              <div class="contact-actions">
+                <a class="btn btn-secondary btn-small" href="mailto:lekhtembhare@gmail.com">Email 1</a>
+                <a class="btn btn-secondary btn-small" href="mailto:gonarkarsameer@gmail.com">Email 2</a>
+              </div>
+            </article>
+            <article class="card contact-card reveal">
+              <div class="icon-circle"><i data-lucide="message-circle"></i></div>
+              <h3>Quick Connect</h3>
+              <p>Reach us on WhatsApp for the fastest response.</p>
+              <div class="contact-actions">
+                <a class="btn btn-secondary btn-small" href="https://wa.me/918766787283" target="_blank" rel="noreferrer">WhatsApp 1</a>
+                <a class="btn btn-secondary btn-small" href="https://wa.me/919529783209" target="_blank" rel="noreferrer">WhatsApp 2</a>
+              </div>
+            </article>
           </div>
           <div class="social-row reveal">
             <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
@@ -112,7 +116,67 @@
           </div>
         </div>
       </section>
+
+      <section id="contact-form" class="section">
+        <div class="container">
+          <div class="section-title reveal">
+            <h2>Send Us A Message</h2>
+            <p>Tell us about your project, support need, or business idea.</p>
+          </div>
+          <div class="register-grid contact-layout">
+            <div class="card form-card reveal">
+              <form id="contactForm" class="registration-form contact-form" novalidate>
+                <div class="form-grid">
+                  <label>
+                    Full Name
+                    <input type="text" name="fullName" placeholder="Your full name" required />
+                  </label>
+                  <label>
+                    Mobile Number
+                    <input type="tel" name="mobile" placeholder="10-digit mobile number" pattern="[0-9]{10}" required />
+                  </label>
+                  <label>
+                    Email Address
+                    <input type="email" name="email" placeholder="you@email.com" required />
+                  </label>
+                  <label>
+                    Subject
+                    <input type="text" name="subject" placeholder="How can we help?" required />
+                  </label>
+                  <label class="full-group">
+                    Message
+                    <textarea name="message" rows="6" placeholder="Write your message here" required></textarea>
+                  </label>
+                </div>
+                <p id="contactStatus" class="form-status" aria-live="polite"></p>
+                <button class="btn btn-primary" type="submit">Send Message</button>
+              </form>
+            </div>
+            <div class="card reveal">
+              <div class="icon-circle"><i data-lucide="sparkles"></i></div>
+              <h3>Why Reach Out</h3>
+              <p>We help with websites, full stack apps, AI solutions, academic projects, design, marketing, and deployment support.</p>
+              <div class="batch-list">
+                <div>Project planning</div>
+                <div>Technical consultation</div>
+                <div>Support and follow-up</div>
+              </div>
+              <a class="btn btn-secondary" href="services.html">Explore Services</a>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <a class="floating-contact-btn" href="mailto:lekhtembhare@gmail.com" aria-label="Email CodeX Academy">
+      <i data-lucide="mail"></i>
+    </a>
+    <a class="floating-whatsapp-btn" href="https://wa.me/918766787283" target="_blank" rel="noreferrer" aria-label="Chat on WhatsApp">
+      <i data-lucide="message-circle"></i>
+    </a>
+    <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">
+      <i data-lucide="arrow-up"></i>
+    </button>
 
     <div class="chatbot" id="chatbot">
       <button
@@ -161,8 +225,9 @@
         <div>
           <h4>Quick Links</h4>
           <a href="index.html">Home</a>
-          <a href="courses.html">Courses</a>
-          <a href="bridgeai.html">BridgeAI</a>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="Courses/courses.html">Courses</a>
           <a href="register.html">Register</a>
         </div>
         <div>
@@ -174,10 +239,10 @@
         </div>
         <div>
           <h4>Services</h4>
-          <a href="bridgeai.html">AI Interview Prep</a>
-          <a href="bridgeai.html">Resume Guidance</a>
-          <a href="bridgeai.html">Career Assistance</a>
-          <a href="contact.html">Contact</a>
+          <a href="services.html">AI Interview Prep</a>
+          <a href="services.html">Resume Guidance</a>
+          <a href="services.html">Career Assistance</a>
+          <a href="contact.html">Contact Us</a>
         </div>
         <div>
           <h4>Social</h4>

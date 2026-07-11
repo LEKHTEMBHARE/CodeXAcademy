@@ -1,11 +1,17 @@
 const FORM_SUBMIT_ENDPOINT = "https://formsubmit.co/ajax/lekhtembhare@gmail.com";
 const DESTINATION_EMAIL = "lekhtembhare@gmail.com";
+const EMAILJS_PUBLIC_KEY = "";
+const EMAILJS_SERVICE_ID = "";
+const EMAILJS_TEMPLATE_ID = "";
 
 const form = document.getElementById("registrationForm");
 const statusEl = document.getElementById("formStatus");
+const contactForm = document.getElementById("contactForm");
+const contactStatusEl = document.getElementById("contactStatus");
 const popup = document.getElementById("successPopup");
 const popupMessage = document.getElementById("popupMessage");
 const closePopup = document.getElementById("closePopup");
+const backToTop = document.getElementById("backToTop");
 
 const revealObserver = new IntersectionObserver(
   (entries) => {
@@ -39,6 +45,16 @@ if (particles) {
 if (window.lucide) {
   lucide.createIcons();
 }
+
+const setButtonLoading = (button, isLoading, loadingText, idleText) => {
+  if (!button) {
+    return;
+  }
+
+  button.disabled = isLoading;
+  button.dataset.idleText = button.dataset.idleText || idleText || button.textContent || "";
+  button.textContent = isLoading ? loadingText : button.dataset.idleText;
+};
 
 const sendToFormSubmit = async (formData) => {
   const response = await fetch(FORM_SUBMIT_ENDPOINT, {
@@ -91,6 +107,31 @@ const buildMailtoUrl = (payload) => {
   return `mailto:${DESTINATION_EMAIL}?subject=${subject}&body=${body}`;
 };
 
+const buildMailtoUrlForContact = (payload) => {
+  const lines = [
+    "New contact message:",
+    "",
+    `Full Name: ${payload.fullName || ""}`,
+    `Mobile: ${payload.mobile || ""}`,
+    `Email: ${payload.email || ""}`,
+    `Subject: ${payload.subject || ""}`,
+    `Message: ${payload.message || ""}`,
+  ];
+
+  const subject = encodeURIComponent(payload.subject || "New Contact - CodeX");
+  const body = encodeURIComponent(lines.join("\n"));
+  return `mailto:${DESTINATION_EMAIL}?subject=${subject}&body=${body}`;
+};
+
+const sendViaEmailJS = async (payload) => {
+  if (!EMAILJS_PUBLIC_KEY || !EMAILJS_SERVICE_ID || !EMAILJS_TEMPLATE_ID || !window.emailjs) {
+    throw new Error("EmailJS is not configured.");
+  }
+
+  await window.emailjs.init(EMAILJS_PUBLIC_KEY);
+  return window.emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, payload);
+};
+
 const seatProgress = document.querySelector(".seat-progress");
 if (seatProgress) {
   const filled = Number(seatProgress.dataset.filled || 0);
@@ -114,9 +155,11 @@ if (seatProgress) {
 if (form) {
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
+    const submitButton = form.querySelector('button[type="submit"]');
     if (statusEl) {
       statusEl.textContent = "Sending...";
     }
+    setButtonLoading(submitButton, true, "Sending...", "Send Message");
 
     const formData = new FormData(form);
     const payload = {};
@@ -148,6 +191,54 @@ if (form) {
         statusEl.textContent = "Email service unreachable. Opening email draft...";
       }
       window.location.href = buildMailtoUrl(payload);
+    } finally {
+      setButtonLoading(submitButton, false, "Sending...", "Send Message");
+    }
+  });
+}
+
+if (contactForm) {
+  contactForm.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    const submitButton = contactForm.querySelector('button[type="submit"]');
+    const formData = new FormData(contactForm);
+    const payload = {};
+    formData.forEach((value, key) => {
+      payload[key] = value;
+    });
+
+    if (contactStatusEl) {
+      contactStatusEl.textContent = "Sending...";
+    }
+    setButtonLoading(submitButton, true, "Sending...", "Send Message");
+
+    if (!contactForm.checkValidity()) {
+      if (contactStatusEl) {
+        contactStatusEl.textContent = "Please fill all required fields correctly.";
+      }
+      contactForm.reportValidity();
+      setButtonLoading(submitButton, false, "Sending...", "Send Message");
+      return;
+    }
+
+    try {
+      formData.append("_subject", payload.subject || "New Contact - CodeX");
+      formData.append("_template", "table");
+      formData.append("_captcha", "false");
+
+      await sendToFormSubmit(formData);
+
+      if (contactStatusEl) {
+        contactStatusEl.textContent = "✅ Thank You! Your message has been sent successfully.";
+      }
+      contactForm.reset();
+    } catch (error) {
+      if (contactStatusEl) {
+        contactStatusEl.textContent = "❌ Error sending message. Opening email draft...";
+      }
+      window.location.href = buildMailtoUrlForContact(payload);
+    } finally {
+      setButtonLoading(submitButton, false, "Sending...", "Send Message");
     }
   });
 }
@@ -324,4 +415,21 @@ if (chatbot) {
   });
 
   addMessage(responses.en.greet, "bot");
+}
+
+if (backToTop) {
+  const toggleBackToTop = () => {
+    if (window.scrollY > 500) {
+      backToTop.classList.add("show");
+    } else {
+      backToTop.classList.remove("show");
+    }
+  };
+
+  window.addEventListener("scroll", toggleBackToTop, { passive: true });
+  toggleBackToTop();
+
+  backToTop.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 }

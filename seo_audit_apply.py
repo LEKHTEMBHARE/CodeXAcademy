@@ -7,35 +7,35 @@ base_url = "https://nextgencoding.vercel.app"
 
 pages_config = {
     "index.html": {
-        "title": "CodeX Academy | Top Web Development, Python & AI Training",
-        "desc": "Master Web Development, Python, Full Stack Development, and AI at CodeX Academy. Join our industry-level mentorship and internship training to become job-ready."
+        "title": "Code For Simples | Top Web Development, Python & AI Training",
+        "desc": "Master Web Development, Python, Full Stack Development, and AI at Code For Simples. Join our industry-level mentorship and internship training to become job-ready."
     },
     "about.html": {
-        "title": "About Us | CodeX Academy - Expert IT Training",
-        "desc": "Learn about CodeX Academy, our mission, expert instructors, and why we are the best choice for aspiring software developers and AI engineers."
+        "title": "About Us | Code For Simples - Expert IT Training",
+        "desc": "Learn about Code For Simples, our mission, expert instructors, and why we are the best choice for aspiring software developers and AI engineers."
     },
     "contact.html": {
-        "title": "Contact Us | CodeX Academy",
-        "desc": "Get in touch with CodeX Academy for course inquiries, mentorship details, and internship opportunities. We are here to help."
+        "title": "Contact Us | Code For Simples",
+        "desc": "Get in touch with Code For Simples for course inquiries, mentorship details, and internship opportunities. We are here to help."
     },
     "register.html": {
-        "title": "Register Now | Enroll in CodeX Academy Courses",
-        "desc": "Secure your spot at CodeX Academy. Register today for classes in Web Development, Python, Full Stack, and Artificial Intelligence."
+        "title": "Register Now | Enroll in Code For Simples Courses",
+        "desc": "Secure your spot at Code For Simples. Register today for classes in Web Development, Python, Full Stack, and Artificial Intelligence."
     },
     "services.html": {
-        "title": "Our Services | CodeX Academy Mentorship & Training",
+        "title": "Our Services | Code For Simples Mentorship & Training",
         "desc": "Explore our premium services including AI career assistance, real-world industry projects, and hands-on skill training."
     },
     "Courses\\courses.html": {
         "title": "Our Courses | Web Dev, Full Stack, Python & AI",
-        "desc": "Browse professional courses offered by CodeX Academy. Advance your career with expert-led training in coding and machine learning."
+        "desc": "Browse professional courses offered by Code For Simples. Advance your career with expert-led training in coding and machine learning."
     },
     "Events\\events.html": {
-        "title": "Upcoming Events & Workshops | CodeX Academy",
-        "desc": "Join CodeX Academy for exclusive seminars, coding workshops, and networking events for developers and AI enthusiasts."
+        "title": "Upcoming Events & Workshops | Code For Simples",
+        "desc": "Join Code For Simples for exclusive seminars, coding workshops, and networking events for developers and AI enthusiasts."
     },
     "Team\\team.html": {
-        "title": "Meet the Team | CodeX Academy Expert Mentors",
+        "title": "Meet the Team | Code For Simples Expert Mentors",
         "desc": "Meet our dedicated team of professional developers, AI researchers, and mentors who guide our students to successful careers."
     }
 }
@@ -43,8 +43,8 @@ pages_config = {
 html_files = glob.glob("**/*.html", recursive=True)
 
 manifest = {
-  "name": "CodeX Academy",
-  "short_name": "CodeX",
+  "name": "Code For Simples",
+  "short_name": "Code For Simples",
   "description": "Premium coding & AI academy for future-ready talent.",
   "start_url": "/",
   "display": "standalone",
@@ -52,12 +52,12 @@ manifest = {
   "theme_color": "#000000",
   "icons": [
     {
-      "src": "/nextgencoding.png",
+      "src": "/Code for Simple logo.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/nextgencoding.png",
+      "src": "/Code for Simple logo.png",
       "sizes": "512x512",
       "type": "image/png"
     }
@@ -73,8 +73,8 @@ for file in html_files:
     if not conf:
         # fallback for any missed file
         conf = {
-            "title": "CodeX Academy",
-            "desc": "CodeX Academy - Future ready coding and AI training."
+            "title": "Code For Simples",
+            "desc": "Code For Simples - Future ready coding and AI training."
         }
     
     file_path_url = file.replace("\\", "/")
@@ -90,16 +90,16 @@ for file in html_files:
     schema_markup = {
       "@context": "https://schema.org",
       "@type": "EducationalOrganization",
-      "name": "CodeX Academy",
+      "name": "Code For Simples",
       "url": base_url,
-      "logo": f"{base_url}/nextgencoding.png",
+      "logo": f"{base_url}/Code for Simple logo.png",
       "sameAs": [
-        "https://www.linkedin.com/company/codex-academy"
+        "https://www.linkedin.com/company/code-for-simples-academy"
       ]
     }
     
     seo_tags = f"""
-  <!-- SEO Tags by CodeX -->
+  <!-- SEO Tags by Code For Simples -->
   <title>{conf['title']}</title>
   <meta name="title" content="{conf['title']}" />
   <meta name="description" content="{conf['desc']}" />
@@ -110,17 +110,17 @@ for file in html_files:
   <meta property="og:url" content="{canonical_url}" />
   <meta property="og:title" content="{conf['title']}" />
   <meta property="og:description" content="{conf['desc']}" />
-  <meta property="og:image" content="{base_url}/nextgencoding.png" />
-  <meta property="og:site_name" content="CodeX Academy" />
+  <meta property="og:image" content="{base_url}/Code for Simple logo.png" />
+  <meta property="og:site_name" content="Code For Simples" />
 
   <meta property="twitter:card" content="summary_large_image" />
   <meta property="twitter:url" content="{canonical_url}" />
   <meta property="twitter:title" content="{conf['title']}" />
   <meta property="twitter:description" content="{conf['desc']}" />
-  <meta property="twitter:image" content="{base_url}/nextgencoding.png" />
+  <meta property="twitter:image" content="{base_url}/Code for Simple logo.png" />
 
   <meta name="theme-color" content="#05060a" />
-  <link rel="apple-touch-icon" href="/nextgencoding.png" />
+  <link rel="apple-touch-icon" href="/Code for Simple logo.png" />
   <link rel="manifest" href="/manifest.json" />
   
   <script type="application/ld+json">
@@ -144,7 +144,7 @@ for file in html_files:
         img_tag = match.group(0)
         if 'alt=' not in img_tag.lower():
             # append alt="" before the closing >
-            return img_tag[:-1] + ' alt="CodeX Academy Content">'
+            return img_tag[:-1] + ' alt="Code For Simples Content">'
         return img_tag
         
     content = re.sub(r'<img[^>]+>', add_alt, content, flags=re.IGNORECASE)

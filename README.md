@@ -1,4 +1,4 @@
-# 🚀 CODEX ACADEMY
+# 🚀 CODE FOR SIMPLES
 
 <div align="center">
 
@@ -14,7 +14,7 @@
 
 ## 🌟 Who We Are
 
-Codex Academy is more than just a coding academy.
+Code For Simples is more than just a coding academy.
 
 We are a community of learners, developers, innovators, and future tech leaders committed to helping students gain real-world skills through practical learning and industry-focused training.
 
@@ -182,7 +182,7 @@ Anyone passionate about learning technology 🚀
 
 ---
 
-# 📈 Why Students Choose Codex Academy
+# 📈 Why Students Choose Code For Simples
 
 📚 Beginner Friendly
 
@@ -203,10 +203,10 @@ Anyone passionate about learning technology 🚀
 # 🌐 Connect With Us
 
 📸 Instagram:
-@codex_academy26
+@code-for-simples_academy26
 
 💻 GitHub:
-Codex Academy
+Code For Simples
 
 📧 Contact Us:
 Available via Instagram DM
@@ -215,7 +215,7 @@ Available via Instagram DM
 
 <div align="center">
 
-## 🚀 CODEX ACADEMY
+## 🚀 CODE FOR SIMPLES
 
 ### Learn Today. Build Tomorrow.
 

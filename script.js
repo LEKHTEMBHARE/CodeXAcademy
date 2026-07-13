@@ -121,7 +121,7 @@ const buildMailtoUrl = (payload) => {
     `Branch: ${payload.branch || ""}`,
   ];
 
-  const subject = encodeURIComponent("New Registration - CodeX");
+  const subject = encodeURIComponent("New Registration - Code For Simples");
   const body = encodeURIComponent(lines.join("\n"));
   return `mailto:${DESTINATION_EMAIL}?subject=${subject}&body=${body}`;
 };
@@ -137,7 +137,7 @@ const buildMailtoUrlForContact = (payload) => {
     `Message: ${payload.message || ""}`,
   ];
 
-  const subject = encodeURIComponent(payload.subject || "New Contact - CodeX");
+  const subject = encodeURIComponent(payload.subject || "New Contact - Code For Simples");
   const body = encodeURIComponent(lines.join("\n"));
   return `mailto:${DESTINATION_EMAIL}?subject=${subject}&body=${body}`;
 };
@@ -195,7 +195,7 @@ if (form) {
     }
 
     try {
-      formData.append("_subject", "New Registration - CodeX");
+      formData.append("_subject", "New Registration - Code For Simples");
       formData.append("_template", "table");
       formData.append("_captcha", "false");
 
@@ -241,7 +241,7 @@ if (contactForm) {
     }
 
     try {
-      formData.append("_subject", payload.subject || "New Contact - CodeX");
+      formData.append("_subject", payload.subject || "New Contact - Code For Simples");
       formData.append("_template", "table");
       formData.append("_captcha", "false");
 
@@ -289,7 +289,7 @@ if (chatbot) {
     },
     hi: {
       greet:
-        "नमस्ते! मैं CodeX सहायक हूं। आप कोर्स, इंटरव्यू प्रेप, रिज़्यूमे गाइडेंस या संपर्क के बारे में पूछ सकते हैं।",
+        "नमस्ते! मैं Code For Simples सहायक हूं। आप कोर्स, इंटरव्यू प्रेप, रिज़्यूमे गाइडेंस या संपर्क के बारे में पूछ सकते हैं।",
       services:
         "हमारी सेवाएं: AI इंटरव्यू तैयारी, मॉक इंटरव्यू, रिज़्यूमे गाइडेंस, AI करियर असिस्टेंस, रियल इंडस्ट्री प्रोजेक्ट्स, AI टूल्स लर्निंग, इंडस्ट्री-लेवल मेंटरशिप, ऑनलाइन क्लासेस, हैंड्स-ऑन ट्रेनिंग और जॉब-रेडी पोर्टफोलियो सपोर्ट। कोर्स: Web Development, App Development, Data Analytics, Full Stack Development, LLM In Machine Learning, Machine Learning, RAG, AI Consulting।",
       courses:
@@ -301,7 +301,7 @@ if (chatbot) {
     },
     mr: {
       greet:
-        "नमस्कार! मी CodeX सहाय्यक आहे. तुम्ही कोर्सेस, इंटरव्ह्यू तयारी, रिझ्युमे मार्गदर्शन किंवा संपर्काबद्दल विचारू शकता.",
+        "नमस्कार! मी Code For Simples सहाय्यक आहे. तुम्ही कोर्सेस, इंटरव्ह्यू तयारी, रिझ्युमे मार्गदर्शन किंवा संपर्काबद्दल विचारू शकता.",
       services:
         "आमच्या सेवा: AI इंटरव्ह्यू तयारी, मॉक इंटरव्ह्यू, रिझ्युमे मार्गदर्शन, AI करिअर सहाय्य, रिअल इंडस्ट्री प्रोजेक्ट्स, AI टूल्स लर्निंग, इंडस्ट्री-लेव्हल मेंटॉरशिप, ऑनलाईन क्लासेस, हॅन्ड्स-ऑन ट्रेनिंग आणि जॉब-रेडी पोर्टफोलिओ सपोर्ट. कोर्सेस: Web Development, App Development, Data Analytics, Full Stack Development, LLM In Machine Learning, Machine Learning, RAG, AI Consulting.",
       courses:
